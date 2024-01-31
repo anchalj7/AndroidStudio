@@ -10,32 +10,21 @@
         android:id="@+id/textviewResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert into meter:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/convertButton"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/convertButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="80dp"
-        android:text="Convert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="377dp" />
+        android:layout_below="@id/editTextMeters"
+        android:layout_marginTop="16dp"
+        android:text="Convert"/>
 
     <EditText
+        android:id="@+id/editTextMeters"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="30dp"
-        android:text="Enter the value:" />
+        android:hint="Enter meters:" />
 
 </RelativeLayout>
