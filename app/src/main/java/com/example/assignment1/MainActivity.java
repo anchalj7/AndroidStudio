@@ -25,12 +25,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String metersStr = editTextMeters.getText().toString();
-                if (!metersStr.isEmpty()) {
-                    double meters = Double.parseDouble(metersStr);
-                    double inches = meters * 39.37;
-                    textviewResult.setText(String.format("%.2f meters is %.2f inches", meters, inches));
-                } else {
-                    textviewResult.setText("Please enter a value in meters");
+                try {
+                    if (!metersStr.isEmpty()) {
+                        double meters = Double.parseDouble(metersStr);
+                        double inches = meters * 39.37;
+                        textviewResult.setText(String.format("%.2f meters is %.2f inches", meters, inches));
+                    } else {
+                        textviewResult.setText("Please enter a value in meters");
+                    }
+                } catch (NumberFormatException e) {
+                    textviewResult.setText("Please provide numeric value");
                 }
             }
         });
